@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Git Checker'){
             steps{
-git branch: 'main', url: 'https://github.com/anil9985/ansible.git'            }
+git branch: 'main', credentialsId: 'e361ab17-7e09-4403-888f-753293d43691', url: 'https://github.com/anil9985/ansible.git'            }
         }
         stage('Terraform init'){
             steps{
